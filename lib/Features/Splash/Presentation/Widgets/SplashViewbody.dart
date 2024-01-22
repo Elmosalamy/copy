@@ -1,7 +1,12 @@
+import 'dart:async';
+
 import 'package:agriguide/Core/Constants.dart';
 import 'package:agriguide/Features/Bottom_nav/Presentation/BottomNav.dart';
-import 'package:agriguide/Features/Onboarding/Presentation/OnBoardingview.dart';
+import 'package:agriguide/Features/Chat/Presentation/Chatview.dart';
+import 'package:agriguide/Features/Home/Presentation/HomeView.dart';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
@@ -33,7 +38,8 @@ class _SplashViewbodyState extends State<SplashViewbody>
         parent: _textcontroller, curve: Curves.fastEaseInToSlowEaseOut);
     _animation = CurvedAnimation(
         parent: _controller, curve: Curves.fastEaseInToSlowEaseOut);
-    goToNextView();
+    Timer(
+        Duration(seconds: 3), () => Navigator.pushNamed(context, Bottomnav.id));
   }
 
   void dispose() {
@@ -49,7 +55,7 @@ class _SplashViewbodyState extends State<SplashViewbody>
           Spacer(),
           ScaleTransition(
               scale: _animation,
-              child: Image.asset(width: 100, height: 100, logo)),
+              child: Image.asset(width: 100.w, height: 100.h, logo)),
           FadeTransition(
             opacity: _textanimation,
             child: Text(
@@ -65,12 +71,5 @@ class _SplashViewbodyState extends State<SplashViewbody>
         ],
       ),
     );
-  }
-
-  void goToNextView() {
-    Future.delayed(Duration(seconds: 5), () {
-      Get.to(() => OnBoardingView(),
-          transition: Transition.leftToRightWithFade);
-    });
   }
 }
