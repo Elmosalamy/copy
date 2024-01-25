@@ -11,10 +11,15 @@ class ProfileName extends StatelessWidget {
         trailing: CircleAvatar(
           radius: 15,
           backgroundColor: Kprimarycolor,
-          child: Icon(
-            size: 20,
-            Icons.close,
-            color: Colors.white,
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              size: 20,
+              Icons.close,
+              color: Colors.white,
+            ),
           ),
         ),
         title: Text(

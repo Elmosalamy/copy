@@ -20,7 +20,7 @@ class _BottomnavState extends State<Bottomnav> {
   static const List<Widget> _widgetOptions = <Widget>[
     HomeView(),
     ServicesView(),
-    CommunityView(),
+    ChatView(),
     ProfileView(),
   ];
 
