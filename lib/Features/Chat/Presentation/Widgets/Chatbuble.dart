@@ -1,4 +1,4 @@
-import 'package:agriguide/Core/Constants.dart';
+import 'package:agriguide/Core/Utils/Constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -24,6 +24,7 @@ class chatbuble extends StatelessWidget {
         ),
         child: Text(
           'Hello',
+          style: TextStyle(fontFamily: "Inter"),
         ),
       ),
     );
@@ -43,7 +44,7 @@ class chatbubleforfriend extends StatelessWidget {
         margin: EdgeInsets.all(12),
         padding: EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: Kprimarycolor,
+          color: AppColor.Kprimarycolor,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(50),
             topRight: Radius.circular(50),
@@ -52,7 +53,7 @@ class chatbubleforfriend extends StatelessWidget {
         ),
         child: Text(
           'Hello',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.white, fontFamily: "Inter"),
         ),
       ),
     );

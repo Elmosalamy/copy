@@ -1,4 +1,4 @@
-import 'package:agriguide/Core/Constants.dart';
+import 'package:agriguide/Core/Utils/Constants.dart';
 import 'package:agriguide/Features/Chat/Presentation/Widgets/ChatMsg.dart';
 import 'package:agriguide/Features/Chat/Presentation/Widgets/Chattextfield.dart';
 import 'package:agriguide/Features/Chat/Presentation/Widgets/ProfileName.dart';
@@ -16,7 +16,7 @@ class ChatViewBody extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
             topRight: Radius.circular(20), topLeft: Radius.circular(20)),
-        color: Ksecondarycolor,
+        color: AppColor.Gray,
       ),
       child: Column(
         children: [

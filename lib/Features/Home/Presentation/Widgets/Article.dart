@@ -1,4 +1,4 @@
-import 'package:agriguide/Core/Constants.dart';
+import 'package:agriguide/Core/Utils/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -9,46 +9,59 @@ class Article extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(bottom: 12),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(6),
-              child: Image.asset(
-                logo,
-                height: 100.h,
-                width: 150.w,
-                fit: BoxFit.cover,
-              )),
-          const SizedBox(
-            height: 12,
-          ),
-          Container(
-            color: Ksecondarycolor,
-            child: Column(
-              children: [
-                Text(
-                  'Article.Post_Title!',
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                    color: Colors.black87,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
+      child: Container(
+        margin: EdgeInsets.only(left: 8, right: 8),
+        width: 150.w,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ClipRRect(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(12),
+                    topRight: Radius.circular(12)),
+                child: Image.asset(
+                  'assets/images/ChangePass (1).jpg',
+                  height: 160.h,
+                  width: 150.w,
+                  fit: BoxFit.cover,
+                )),
+            Container(
+              padding: EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: AppColor.Gray,
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(12),
+                    bottomRight: Radius.circular(12)),
+              ),
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 5,
                   ),
-                ),
-                const SizedBox(
-                  height: 8,
-                ),
-                Text(
-                  'Article.Category_Name!',
-                  maxLines: 2,
-                  style: const TextStyle(color: Colors.grey, fontSize: 14),
-                )
-              ],
-            ),
-          )
-        ],
+                  Text(
+                    'what fertilizers',
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      fontFamily: "Inter",
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    'Article.Category_Name! dfghjklouglidhcvgbhjmv2',
+                    maxLines: 2,
+                    style: const TextStyle(fontSize: 12, fontFamily: "Inter"),
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

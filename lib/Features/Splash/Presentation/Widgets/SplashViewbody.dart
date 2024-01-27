@@ -1,14 +1,10 @@
 import 'dart:async';
 
-import 'package:agriguide/Core/Constants.dart';
+import 'package:agriguide/Core/Utils/AppTextStyle.dart';
+import 'package:agriguide/Core/Utils/Constants.dart';
 import 'package:agriguide/Features/Bottom_nav/Presentation/BottomNav.dart';
-import 'package:agriguide/Features/Chat/Presentation/Chatview.dart';
-import 'package:agriguide/Features/Home/Presentation/HomeView.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 
 class SplashViewbody extends StatefulWidget {
   const SplashViewbody({super.key});
@@ -55,17 +51,10 @@ class _SplashViewbodyState extends State<SplashViewbody>
           Spacer(),
           ScaleTransition(
               scale: _animation,
-              child: Image.asset(width: 100.w, height: 100.h, logo)),
+              child: Image.asset(width: 120.w, height: 120.h, logo)),
           FadeTransition(
             opacity: _textanimation,
-            child: Text(
-              'Agri Guide',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w900,
-                color: Kprimarycolor,
-              ),
-            ),
+            child: Text('Agri Guide', style: CustomTextStyle.Knewave400Style30),
           ),
           Spacer(),
         ],

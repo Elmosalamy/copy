@@ -1,4 +1,4 @@
-import 'package:agriguide/Core/Constants.dart';
+import 'package:agriguide/Core/Utils/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,7 +12,7 @@ class ChatTextfield extends StatelessWidget {
       child: Row(
         children: [
           CircleAvatar(
-            backgroundColor: Kprimarycolor,
+            backgroundColor: AppColor.Kprimarycolor,
             child: Icon(
               Icons.camera_alt,
               color: Colors.white,
@@ -25,7 +25,7 @@ class ChatTextfield extends StatelessWidget {
             child: TextField(
               decoration: InputDecoration(
                 suffixIcon: CircleAvatar(
-                  backgroundColor: Kprimarycolor,
+                  backgroundColor: AppColor.Kprimarycolor,
                   child: Icon(
                     Icons.send,
                     color: Colors.white,

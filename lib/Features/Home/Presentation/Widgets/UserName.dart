@@ -1,6 +1,5 @@
-import 'package:agriguide/Core/Constants.dart';
+import 'package:agriguide/Core/Utils/Constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class UserName extends StatelessWidget {
   const UserName({super.key});
@@ -12,10 +11,10 @@ class UserName extends StatelessWidget {
       trailing: Icon(
         size: 30,
         Icons.notification_add_rounded,
-        color: Kprimarycolor,
+        color: AppColor.Kprimarycolor,
       ),
       title: Text(
-        'Nora Mohamed',
+        'Hi Catherinel',
         style: TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
       ),
       subtitle: Text(
