@@ -3,8 +3,10 @@ import 'package:agriguide/Features/Splash/Presentation/SplashView.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'Features/Community/Presentation/views/CommunityView.dart';
 import 'Features/Onboarding/Presentation/OnBoardingview.dart';
 import 'Features/growing_tips/Presentation/views/growing_tips_view.dart';
+import 'Features/sensor/presentation/view/sensor_screen.dart';
 import 'Features/suitaple_plants/presentation/view/suitable_plants_view.dart';
 
 void main() {
