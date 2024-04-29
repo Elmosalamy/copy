@@ -3,14 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SearchTextField extends StatelessWidget {
-  const SearchTextField({super.key});
+  const SearchTextField({super.key,  this.width=280,  this.height=45});
 
+   final double width,height;
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Container(
-        width: 280.w,
-        height: 45.h,
+      child: SizedBox(
+        width: width.w,
+        height: height.h,
         child: TextField(
           decoration: InputDecoration(
               focusedBorder: OutlineInputBorder(

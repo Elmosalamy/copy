@@ -11,23 +11,23 @@ class ChatViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(bottom: 20),
-      margin: EdgeInsets.only(right: 16, left: 16, top: 50),
+      padding: const EdgeInsets.only(bottom: 20),
+      margin: const EdgeInsets.only(right: 16, left: 16, top: 50),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
             topRight: Radius.circular(20), topLeft: Radius.circular(20)),
         color: AppColor.Gray,
       ),
       child: Column(
         children: [
-          ProfileName(),
+          const ProfileName(),
           Container(
               width: 300.w,
-              child: Divider(
+              child: const Divider(
                 color: Color(0xffB7B7B7),
               )),
-          ChatMessages(),
-          ChatTextfield(),
+          const ChatMessages(),
+          const ChatTextfield(),
         ],
       ),
     );
